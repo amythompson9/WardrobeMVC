@@ -219,6 +219,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Main.css" />
     <Content Include="Content\WardrobeImages\armyjacket.jpg" />
     <Content Include="Content\WardrobeImages\beanie.png" />
     <Content Include="Content\WardrobeImages\blackvee.jpg" />
