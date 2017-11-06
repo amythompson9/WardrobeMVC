@@ -27,8 +27,12 @@ select,
 textarea {
     max-width: 280px;
 }
-.navbar{
+.navbar {
     background-color: rgb(254,221,206);
 }
-
-
+.carousel-inner {
+    max-height: 200px;
+}
+.center-block {
+    max-height:175px;
+}
