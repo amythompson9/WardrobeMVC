@@ -8,66 +8,42 @@
 
 <div>
     <h4>Top</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Photo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Photo)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Type)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Type)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ColorID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ColorID)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Occasion.OccasionName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Occasion.OccasionName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Season.SeasonName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Season.SeasonName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Season1.SeasonName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Season1.SeasonName)
-        </dd>
-
-    </dl>
 </div>
+    <div class="row">
+        <h2>
+            @Html.DisplayFor(modelItem => Model.Name)
+        </h2>
+    </div>
+    <div class="row">
+        @*@Html.DisplayFor(modelItem => item.Photo)*@
+        <div class="topphoto">
+            <img src=@Url.Content(Model.Photo) />
+        </div>
+    </div>
+    <div class="row">
+        <p>
+            @Html.DisplayNameFor(model => model.Type)
+            @Html.DisplayFor(modelItem => Model.Type)
+        </p>
+    </div>
+    <div class="row">
+        <p>
+            @Html.DisplayNameFor(model => model.Color.ColorName)
+            @Html.DisplayFor(modelItem => Model.Color.ColorName)
+        </p>
+    </div>
+    <div class="row">
+        <p>
+            @Html.DisplayNameFor(model => model.Occasion.OccasionName)
+            @Html.DisplayFor(modelItem => Model.Occasion.OccasionName)
+        </p>
+    </div>
+    <div class="row">
+        <p>
+            @Html.DisplayNameFor(model => model.Season.SeasonName)
+            @Html.DisplayFor(modelItem => Model.Season.SeasonName)
+        </p>
+    </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.TopID }) |
     @Html.ActionLink("Back to List", "Index")
