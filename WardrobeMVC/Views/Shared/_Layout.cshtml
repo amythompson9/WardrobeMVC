@@ -9,23 +9,48 @@
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Hipster Closet", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a class="navbar-brand" @Html.ActionLink("Hipster Closet", "Index", "Home")</a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Tops", "Index", "Tops")</li>
-                    <li>@Html.ActionLink("Bottoms", "Index", "Bottoms")</li>
-                    <li>@Html.ActionLink("Shoes", "Index", "Feetwears")</li>
-                    <li>@Html.ActionLink("Accessories", "Index", "Accessories")</li>
-                </ul>
-            </div>
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Tops
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Add a Top", "Create", "Tops")</li>
+                        <li>@Html.ActionLink("See All Tops", "Index", "Tops")</li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Bottoms
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Add a Bottom", "Create", "Bottoms")</li>
+                        <li>@Html.ActionLink("See All Bottoms", "Index", "Bottoms")</li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Accessories
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Add an Accessory", "Create", "Accessories")</li>
+                        <li>@Html.ActionLink("See All Accessories", "Index", "Accessories")</li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Shoes
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Add a Shoe", "Create", "Feetwears")</li>
+                        <li>@Html.ActionLink("See All Shoes", "Index", "Feetwears")</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="container body-content">
