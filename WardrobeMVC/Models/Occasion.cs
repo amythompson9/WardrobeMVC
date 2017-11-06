@@ -19,8 +19,8 @@ namespace WardrobeMVC.Models
         {
             this.Accessories = new HashSet<Accessory>();
             this.Bottoms = new HashSet<Bottom>();
-            this.Tops = new HashSet<Top>();
             this.Feetwears = new HashSet<Feetwear>();
+            this.Tops = new HashSet<Top>();
         }
     
         public int OccasionID { get; set; }
@@ -31,8 +31,8 @@ namespace WardrobeMVC.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bottom> Bottoms { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Top> Tops { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Feetwear> Feetwears { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Top> Tops { get; set; }
     }
 }

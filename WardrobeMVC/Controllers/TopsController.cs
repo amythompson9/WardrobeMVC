@@ -17,7 +17,7 @@ namespace WardrobeMVC.Controllers
         // GET: Tops
         public ActionResult Index()
         {
-            var tops = db.Tops.Include(t => t.Occasion).Include(t => t.Season).Include(t => t.Season1);
+            var tops = db.Tops.Include(t => t.Color).Include(t => t.Season).Include(t => t.Occasion);
             return View(tops.ToList());
         }
 
@@ -39,9 +39,9 @@ namespace WardrobeMVC.Controllers
         // GET: Tops/Create
         public ActionResult Create()
         {
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "ColorName");
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName");
             ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "OccasionName");
-            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName");
-            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName");
             return View();
         }
 
@@ -59,9 +59,9 @@ namespace WardrobeMVC.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "ColorName", top.ColorID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName", top.SeasonID);
             ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "OccasionName", top.OccasionID);
-            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName", top.SeasonID);
-            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName", top.SeasonID);
             return View(top);
         }
 
@@ -77,9 +77,9 @@ namespace WardrobeMVC.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "ColorName", top.ColorID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName", top.SeasonID);
             ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "OccasionName", top.OccasionID);
-            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName", top.SeasonID);
-            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName", top.SeasonID);
             return View(top);
         }
 
@@ -96,9 +96,9 @@ namespace WardrobeMVC.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "ColorName", top.ColorID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName", top.SeasonID);
             ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "OccasionName", top.OccasionID);
-            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName", top.SeasonID);
-            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName", top.SeasonID);
             return View(top);
         }
 

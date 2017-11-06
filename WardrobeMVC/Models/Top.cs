@@ -24,6 +24,6 @@ namespace WardrobeMVC.Models
     
         public virtual Occasion Occasion { get; set; }
         public virtual Season Season { get; set; }
-        public virtual Season Season1 { get; set; }
+        public virtual Color Color { get; set; }
     }
 }

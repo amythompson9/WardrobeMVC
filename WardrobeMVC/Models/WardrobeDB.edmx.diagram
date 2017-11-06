@@ -10,20 +10,21 @@
         <EntityTypeShape EntityType="WardrobeDBModel.Color" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
         <EntityTypeShape EntityType="WardrobeDBModel.Occasion" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
         <EntityTypeShape EntityType="WardrobeDBModel.Season" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="WardrobeDBModel.Top" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
         <AssociationConnector Association="WardrobeDBModel.FK_Accessories_Colors" ManuallyRouted="false" />
         <AssociationConnector Association="WardrobeDBModel.FK_Accessories_Occasions" ManuallyRouted="false" />
         <AssociationConnector Association="WardrobeDBModel.FK_Accessories_Seasons" ManuallyRouted="false" />
         <AssociationConnector Association="WardrobeDBModel.FK_Bottoms_Colors" ManuallyRouted="false" />
         <AssociationConnector Association="WardrobeDBModel.FK_Bottoms_Occasions" ManuallyRouted="false" />
         <AssociationConnector Association="WardrobeDBModel.FK_Bottoms_Seasons" ManuallyRouted="false" />
-        <AssociationConnector Association="WardrobeDBModel.FK_Tops_Occasions" ManuallyRouted="false" />
-        <AssociationConnector Association="WardrobeDBModel.FK_Tops_Colors" ManuallyRouted="false" />
-        <AssociationConnector Association="WardrobeDBModel.FK_Tops_Seasons" ManuallyRouted="false" />
         <EntityTypeShape EntityType="WardrobeDBModel.Feetwear" Width="1.5" PointX="3" PointY="2.75" />
         <AssociationConnector Association="WardrobeDBModel.FK_Feetwear_Colors" />
         <AssociationConnector Association="WardrobeDBModel.FK_Feetwear_Occasions" />
         <AssociationConnector Association="WardrobeDBModel.FK_Feetwear_Seasons" />
+        <EntityTypeShape EntityType="WardrobeDBModel.Top" Width="1.5" PointX="3" PointY="11.375" />
+        <AssociationConnector Association="WardrobeDBModel.FK_Tops_Occasions" />
+        <AssociationConnector Association="WardrobeDBModel.FK_Tops_Colors" />
+        <AssociationConnector Association="WardrobeDBModel.FK_Tops_Seasons" />
+        <AssociationConnector Association="WardrobeDBModel.FK_Tops_Colors1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -30,7 +30,7 @@ namespace WardrobeMVC.Models
         public virtual DbSet<Color> Colors { get; set; }
         public virtual DbSet<Occasion> Occasions { get; set; }
         public virtual DbSet<Season> Seasons { get; set; }
-        public virtual DbSet<Top> Tops { get; set; }
         public virtual DbSet<Feetwear> Feetwears { get; set; }
+        public virtual DbSet<Top> Tops { get; set; }
     }
 }
